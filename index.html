@@ -27,7 +27,7 @@
     <!-- 곡 정보 -->
     <div style="text-align: center; margin-bottom: 20px;">
         <span style="color: #b38b4d; font-size: 12px; font-weight: bold; letter-spacing: 2px; display: block; margin-bottom: 5px;">NOW PLAYING</span>
-        <h3 style="margin: 0; font-size: 18px; color: #f2e6d5; letter-spacing: 1px;">KRL OFFICIAL THEME : </h3>
+        <h3 style="margin: 0; font-size: 18px; color: #f2e6d5; letter-spacing: 1px;">KRL OFFICIAL THEME : Shall We Dance?</h3>
     </div>
 
     <!-- 진행 바 (Progress Bar) -->
@@ -145,11 +145,21 @@ audio.addEventListener('timeupdate', function() {
 });
 
 // 진행 바 클릭 시 이동
+// 진행 바 클릭 시 이동 (보완된 코드)
 progressContainer.addEventListener('click', function(e) {
+    // progressContainer의 전체 가로폭
     var width = this.clientWidth;
-    var clickX = e.offsetX;
+    
+    // 요소의 페이지 내 실제 왼쪽 좌표를 구하여 마우스 클릭 위치에서 뺍니다.
+    var rect = this.getBoundingClientRect();
+    var clickX = e.clientX - rect.left;
+    
     var duration = audio.duration;
-    audio.currentTime = (clickX / width) * duration;
+    
+    // 정상적으로 음원 총 길이가 로드되었을 때만 이동
+    if (duration) {
+        audio.currentTime = (clickX / width) * duration;
+    }
 });
 
 // 재생 종료 시 초기화
