@@ -1,33 +1,32 @@
 <div style="width: 100%; background-color: #050507; margin: 0; padding: 0;">
 
-    <div style="width: 100%; max-width: 1200px; margin: 0 auto; background-color: #0b0c10; font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #d1c1a8; line-height: 1.6;">
+    <div style="width: 100%; max-width: 1200px; margin: 0 auto; background-color: #0b0c10; font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #d1c1a8; line-height: 1.6; scroll-behavior: smooth;">
 
         <audio id="krlThemeAudio" src="ff.mp3"></audio>
 
-        <nav style="display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: rgba(0,0,0,0.9); border-bottom: 1px solid #b38b4d;">
-            <div style="font-size: 24px; font-weight: bold; color: #f2e6d5; letter-spacing: -1px;">
+        <nav style="position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: rgba(11, 12, 16, 0.95); border-bottom: 1px solid #b38b4d; backdrop-filter: blur(10px);">
+            <div style="font-size: 24px; font-weight: bold; color: #f2e6d5; letter-spacing: -1px; cursor: pointer;" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
                 KRL <span style="color: #b38b4d;">OFFICIAL</span>
             </div>
-            <div style="display: flex; gap: 30px; font-size: 15px; font-weight: bold;">
-                <a href="#" style="color: #f2e6d5; text-decoration: none;">구단소개</a>
-                <a href="#" style="color: #f2e6d5; text-decoration: none;">선수단</a>
-                <a href="#" style="color: #f2e6d5; text-decoration: none;">경기정보</a>
-                <a href="#" style="color: #f2e6d5; text-decoration: none;">히스토리</a>
-                <a href="#" style="color: #b38b4d; text-decoration: none;">팬스토어</a>
+            <div style="display: flex; gap: 30px; font-size: 15px; font-weight: bold; align-items: center;">
+                <a href="#about" style="color: #f2e6d5; text-decoration: none; transition: color 0.3s;">구단소개</a>
+                <a href="#teams" style="color: #f2e6d5; text-decoration: none; transition: color 0.3s;">선수단</a>
+                <a href="#history" style="color: #f2e6d5; text-decoration: none; transition: color 0.3s;">히스토리</a>
+                <a href="#ticket" style="color: #0b0c10; background-color: #b38b4d; padding: 6px 16px; border-radius: 4px; text-decoration: none; transition: all 0.3s; box-shadow: 0 0 10px rgba(179,139,77,0.3);">예매하기</a>
             </div>
         </nav>
 
         <section style="position: relative; width: 100%; height: 500px; overflow: hidden; background-color: #000;">
             <div id="slideContainer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
                 <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/F2/G3.webp?v=19" alt="KRL 메인 전장 1" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.8s ease-in-out; z-index: 1;">
-            <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/E2/G3.webp?v=19" alt="KRL 메인 전장 2" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
-            <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/D4/G3.webp?v=19" alt="KRL 메인 전장 3" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
-            <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/F4/G3.webp?v=19" alt="KRL 메인 전장 4" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1; filter: hue-rotate(90deg);">
-        </div>
+                <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/E2/G3.webp?v=19" alt="KRL 메 be인 전장 2" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
+                <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/D4/G3.webp?v=19" alt="KRL 메인 전장 3" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
+                <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/F4/G3.webp?v=19" alt="KRL 메인 전장 4" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1; filter: hue-rotate(90deg);">
+            </div>
 
             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%; z-index: 2; pointer-events: auto;">
-                <h2 style="font-size: 56px; color: #ffffff; margin: 0; text-shadow: 0 0 30px rgba(179,139,77,0.8); font-style: italic; letter-spacing: -2px;">WELCOME, FOLLOWERS!</h2><br><br><br>
-                <h2 style="font-size: 25px; color: #ffffff; margin: 0; text-shadow: 0 0 30px rgba(179,139,77,0.8); font-style: italic; letter-spacing: -2px;">옛 영웅들의 신화적 격돌과 각축전이 벌어지는 이곳은, 대한민국 레이드 리그입니다!</h2>
+                <h2 style="font-size: 56px; color: #ffffff; margin: 0; text-shadow: 0 0 30px rgba(179,139,77,0.8); font-style: italic; letter-spacing: -2px;">WE ARE THE HONOR,<br>WE ARE THE RAIDERS!</h2><br>
+                <h2 style="font-size: 25px; color: #ffffff; margin: 0; text-shadow: 0 0 30px rgba(179,139,77,0.8); font-style: italic; letter-spacing: -2px;">영웅들의 신화적 격돌과 각축전이 벌어지는 이곳은, 대한민국 레이드 리그입니다!</h2>
                 
                 <div style="margin-top: 30px;">
                     <div style="margin: 30px auto 0; max-width: 500px; background: rgba(0,0,0,0.6); padding: 25px; border-radius: 15px; border: 1px solid #333; backdrop-filter: blur(5px);">
@@ -69,27 +68,279 @@
                 <a href="#" style="color: #8a7a5f; text-decoration: none; font-size: 14px;">전체보기 +</a>
             </div>
             
-            <div style="display: flex; gap: 20px;">
-                <div style="flex: 1; background: #161618; border: 1px solid #2a2a2e;">
-                    <div style="height: 180px; background: #333; overflow: hidden;">
-                        <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/KRL.webp?v=19" alt="News" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="display: flex; gap: 20px; align-items: stretch;">
+                <div style="flex: 1; background: #161618; border: 1px solid #2a2a2e; display: flex; flex-direction: column;">
+                    <div style="width: 100%; display: flex; align-items: center; justify-content: center; background: #000; overflow: hidden;">
+                        <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/KRL.webp?v=19" alt="News" style="width: 100%; height: auto; display: block; object-fit: contain;">
                     </div>
-                    <div style="padding: 20px;">
+                    <div style="padding: 20px; flex-grow: 1;">
                         <span style="color: #b38b4d; font-size: 12px; font-weight: bold;">EVENT</span>
                         <h4 style="margin: 10px 0; color: #f2e6d5; font-size: 18px;">결과 예측 이벤트 페이지 개설 안내</h4>
-                        <p style="font-size: 14px; color: #8a7a5f;">2026 정규시즌과 포스트시즌, 한국시리즈의 최종 결과는 어떻게 될까요? 예리한 분석 감각을 가지신 KRL 팔로워 여러분들의 선택을 공유하세요. 최후까지 생존하신 팔로워 님들께는 한정판 사인 굿즈를 제공해 드립니다!</p>
+                        <p style="font-size: 14px; color: #8a7a5f; margin: 0;">2026 정규시즌과 포스트시즌, 한국시리즈의 최종 결과는 어떻게 될까요? 예리한 분석 감각을 가지신 KRL 팔로워 여러분들의 선택을 공유하세요.</p>
                     </div>
                 </div>
-                <div style="flex: 1; background: #161618; border: 1px solid #2a2a2e;">
-                    <div style="height: 180px; background: #333; overflow: hidden;">
-                        <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/cer.webp?v=19" alt="News" style="width: 100%; height: 100%; object-fit: cover;">
+
+                <div style="flex: 1; background: #161618; border: 1px solid #2a2a2e; display: flex; flex-direction: column;">
+                    <div style="width: 100%; display: flex; align-items: center; justify-content: center; background: #000; overflow: hidden;">
+                        <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/cer.webp?v=19" alt="News" style="width: 100%; height: auto; display: block; object-fit: contain;">
                     </div>
-                    <div style="padding: 20px;">
+                    <div style="padding: 20px; flex-grow: 1;">
                         <span style="color: #b38b4d; font-size: 12px; font-weight: bold;">NOTICE</span>
                         <h4 style="margin: 10px 0; color: #f2e6d5; font-size: 18px;">KRL 정규시즌 개막전 일정 알림</h4>
-                        <p style="font-size: 14px; color: #8a7a5f;">오래 기다리셨습니다, KRL 팔로워 여러분! 오는 4월 5일, 마침내 6개 팀이 서울-대전-대구-부산-인천-광주에서 격돌합니다! 포스트시즌 진출을 향해 당당히 포문을 여는 것은 어떤 팀들이 될까요?</p>
+                        <p style="font-size: 14px; color: #8a7a5f; margin: 0;">오래 기다리셨습니다, KRL 팔로워 여러분! 오는 4월 5일, 마침내 6개 팀이 서울-대전-대구-부산-인천-광주에서 격돌합니다! 포스트시즌 진출을 향해 당당히 포문을 여는 것은 어떤 팀들이 될까요?<br><br>◀ 4월 5일 1부 경기 ▶<br>[홈] 대구 vs 서울 [원정] 🗺️ 대구 라이온즈 필드<br>[홈] 부산 vs 대전 [원정] 🗺️ 부산 사직 아일랜드<br>[홈] 광주 vs 인천 [원정] 🗺️ 광주 챔피언스 마운틴<br>◀ 4월 5일 2부 경기 ▶<br>[홈] 서울 vs 대구 [원정] 🗺️ 서울 잠실 미르 스타디움<br>[홈] 대전 vs 부산 [원정] 🗺️ 대전 이글스 레어<br>[홈] 인천 vs 광주 [원정] 🗺️ 인천 랜더스 홀리 생추어리</p>
                     </div>
                 </div>
+            </div>
+       </section>
+
+<section id="about" style="padding: 80px 40px; background: #050507; border-top: 1px solid #222; scroll-margin-top: 80px;">
+    <div style="text-align: center; margin-bottom: 5px;">
+        <span style="color: #b38b4d; font-size: 14px; font-weight: bold; letter-spacing: 3px;">INTRODUCTION</span>
+    </div>
+    <h3 style="font-size: 32px; color: #f2e6d5; text-align: center; margin: 0 0 60px 0; font-style: italic;">LEAGUE CLUBS</h3>
+    
+    <div style="display: flex; flex-direction: column; gap: 60px; max-width: 900px; margin: 0 auto;">
+        
+        <article style="background: #0b0c10; border: 1px solid #222; border-radius: 8px; overflow: hidden; padding-bottom: 35px;">
+            <div style="width: 100%; height: auto; max-height: 450px; background: #1a1b20; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/DE.webp?v=19" alt="대전 단체 사진" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div style="padding: 30px 30px 0 30px; text-align: center;">
+                <h4 style="color: #f2e6d5; font-size: 26px; margin: 0 0 12px 0; font-weight: bold;">🐦‍🔥 대전 이글스 [DE]</h4>
+                <div style="color: #b38b4d; font-size: 16px; font-weight: bold; margin-bottom: 15px; letter-spacing: 1px;">"비상하라, 영원한 불꽃이여!"</div>
+                <p style="color: #8a7a5f; font-size: 14px; margin: 0 auto; line-height: 1.6; max-width: 700px;">불사조는 우아하게 날갯짓하며 둥지를 지키고,<br>정령의 축복에 벼려진 칼 끝은 철벽 안에서 기회를 노립니다.<br>이글스 선수들은 팔로워 님의 지지에 화끈하고도 시원시원한 경기로 보답할 것입니다.</p>
+            </div>
+        </article>
+
+        <article style="background: #0b0c10; border: 1px solid #222; border-radius: 8px; overflow: hidden; padding-bottom: 35px;">
+            <div style="width: 100%; height: auto; max-height: 450px; background: #1a1b20; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/DL.webp?v=19" alt="대구 단체 사진" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div style="padding: 30px 30px 0 30px; text-align: center;">
+                <h4 style="color: #f2e6d5; font-size: 26px; margin: 0 0 12px 0; font-weight: bold;">🦁 대구 라이온즈 [DL]</h4>
+                <div style="color: #b38b4d; font-size: 16px; font-weight: bold; margin-bottom: 15px; letter-spacing: 1px;">"여왕의 기지개와 함께 무너졌던 왕조가 일어서다."</div>
+                <p style="color: #8a7a5f; font-size: 14px; margin: 0 auto; line-height: 1.6; max-width: 700px;">짐승들의 여왕은 엎드린 채 매마른 광야를 노려보고,<br>날카롭게 뻗는 장미덩굴 사이엔 신성한 화망이 펼쳐집니다.<br>사자의 장엄한 서곡이 귓가에 스미는 순간, 이미 팔로워 님은 그 선율에 매료된 상태일 것입니다.</p>
+            </div>
+        </article>
+
+        <article style="background: #0b0c10; border: 1px solid #222; border-radius: 8px; overflow: hidden; padding-bottom: 35px;">
+            <div style="width: 100%; height: auto; max-height: 450px; background: #1a1b20; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <img src="대구_라이온즈_단체사진_주소.jpg" alt="부산 단체 사진" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div style="padding: 30px 30px 0 30px; text-align: center;">
+                <h4 style="color: #f2e6d5; font-size: 26px; margin: 0 0 12px 0; font-weight: bold;">🦁 부산 자이언츠</h4>
+                <div style="color: #b38b4d; font-size: 16px; font-weight: bold; margin-bottom: 15px; letter-spacing: 1px;">"지치지 않는 맹수의 푸른 심장"</div>
+                <p style="color: #8a7a5f; font-size: 14px; margin: 0 auto; line-height: 1.6; max-width: 700px;">대구 라이온즈 필드를 거점으로 삼아 활약하며, 장기전에서 그 누구보다 진가를 발휘하는 강인한 돌파력의 구단입니다.</p>
+            </div>
+        </article>
+
+        <article style="background: #0b0c10; border: 1px solid #222; border-radius: 8px; overflow: hidden; padding-bottom: 35px;">
+            <div style="width: 100%; height: auto; max-height: 450px; background: #1a1b20; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <img src="대전_이글스_단체사진_주소.jpg" alt="광주 단체 사진" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div style="padding: 30px 30px 0 30px; text-align: center;">
+                <h4 style="color: #f2e6d5; font-size: 26px; margin: 0 0 12px 0; font-weight: bold;">🦅 광주 타이거즈</h4>
+                <div style="color: #b38b4d; font-size: 16px; font-weight: bold; margin-bottom: 15px; letter-spacing: 1px;">"하늘을 가르는 전술적 강습"</div>
+                <p style="color: #8a7a5f; font-size: 14px; margin: 0 auto; line-height: 1.6; max-width: 700px;">대전 이글스 레어의 상공을 장악하듯 공중 강습 레이드에 특화되어 있으며, 허점을 찌르는 변칙 전술에 매우 능합니다.</p>
+            </div>
+        </article>
+
+        <article style="background: #0b0c10; border: 1px solid #222; border-radius: 8px; overflow: hidden; padding-bottom: 35px;">
+            <div style="width: 100%; height: auto; max-height: 450px; background: #1a1b20; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <img src="인천_랜더스_단체사진_주소.jpg" alt="인천 랜더스 단체 사진" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div style="padding: 30px 30px 0 30px; text-align: center;">
+                <h4 style="color: #f2e6d5; font-size: 26px; margin: 0 0 12px 0; font-weight: bold;">🚀 인천 랜더스</h4>
+                <div style="color: #b38b4d; font-size: 16px; font-weight: bold; margin-bottom: 15px; letter-spacing: 1px;">"차원을 넘어 안착한 초인 동맹"</div>
+                <p style="color: #8a7a5f; font-size: 14px; margin: 0 auto; line-height: 1.6; max-width: 700px;">인천 랜더스 홀리 생추어리를 거점으로 삼으며 차원 관문을 통해 합류한 초인들이 모여 차원이 다른 기량을 발휘합니다.</p>
+            </div>
+        </article>
+
+        <article style="background: #0b0c10; border: 1px solid #222; border-radius: 8px; overflow: hidden; padding-bottom: 35px;">
+            <div style="width: 100%; height: auto; max-height: 450px; background: #1a1b20; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <img src="광주_챔피언스_단체사진_주소.jpg" alt="서울 단체 사진" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+            <div style="padding: 30px 30px 0 30px; text-align: center;">
+                <h4 style="color: #f2e6d5; font-size: 26px; margin: 0 0 12px 0; font-weight: bold;">🐯 서울 트윈스</h4>
+                <div style="color: #b38b4d; font-size: 16px; font-weight: bold; margin-bottom: 15px; letter-spacing: 1px;">"난공불락, 요새의 수호신들"</div>
+                <p style="color: #8a7a5f; font-size: 14px; margin: 0 auto; line-height: 1.6; max-width: 700px;">광주 챔피언스 마운틴의 험준함을 닮아 단단한 방어벽을 구축하며, 상대의 공세를 무력화시키는 수비학의 대가들입니다.</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+        <section id="teams" style="padding: 80px 40px; background: #0b0c10; border-top: 1px solid #222; scroll-margin-top: 80px;">
+            <div style="text-align: center; margin-bottom: 5px;">
+                <span style="color: #b38b4d; font-size: 14px; font-weight: bold; letter-spacing: 3px;">ROSTER</span>
+            </div>
+            <h3 style="font-size: 32px; color: #f2e6d5; text-align: center; margin: 0 0 40px 0; font-style: italic;">KEY PLAYERS</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px;">
+                
+                <div style="background: #161618; border: 2px solid #b38b4d; box-shadow: 0 0 10px rgba(179,139,77,0.4); border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🛡️</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Vanguard (C)</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Main Tanker</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">⚔️</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Berserker</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Main Striker</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🔮</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Chronos</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Tactical Mage</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🌿</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Seraph</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Holy Healer</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🏹</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Artemis</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Ranger</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🥷</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Shadow</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Assassin</span>
+                </div>
+
+                <div style="background: #161618; border: 2px solid #b38b4d; box-shadow: 0 0 10px rgba(179,139,77,0.4); border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🌋</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Aegis (C)</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Sub Tanker</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">⚡</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Blitz</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Chaser</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">❄️</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Frost</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Control Mage</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">☀️</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Helios</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Light Priest</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🐾</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Beast</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Summoner</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">⛓️</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Chain</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Slayer</span>
+                </div>
+
+                <div style="background: #161618; border: 2px solid #b38b4d; box-shadow: 0 0 10px rgba(179,139,77,0.4); border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🧱</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Goliath (C)</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Iron Wall</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🔥</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Ignis</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Pyromancer</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">💧</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Aqua</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Tide Caller</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🧪</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Alchemist</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Buffer</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">💣</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Boomer</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Engineer</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🎵</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Bard</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Minstrel</span>
+                </div>
+
+                <div style="background: #161618; border: 2px solid #b38b4d; box-shadow: 0 0 10px rgba(179,139,77,0.4); border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">👑</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Kaiser (C)</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Commander</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🌪️</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Zephyr</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Wind Walker</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">💎</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Diamond</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Guardian</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">👁️</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Oracle</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Seer</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🎯</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Sniper</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Sharpshooter</span>
+                </div>
+                <div style="background: #161618; border: 1px solid #2a2a2e; border-radius: 6px; overflow: hidden; text-align: center; padding-bottom: 12px;">
+                    <div style="height: 130px; background: #252528; display: flex; align-items: center; justify-content: center; font-size: 32px;">🎭</div>
+                    <h4 style="color: #f2e6d5; font-size: 14px; margin: 10px 0 2px 0;">Joker</h4>
+                    <span style="color: #b38b4d; font-size: 11px; font-weight: bold;">Trickster</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="history" style="padding: 80px 40px; background: #0b0c10; border-top: 1px solid #222; scroll-margin-top: 80px;">
+            <div style="text-align: center; margin-bottom: 5px;">
+                <span style="color: #b38b4d; font-size: 14px; font-weight: bold; letter-spacing: 3px;">CHRONICLE</span>
+            </div>
+            <h3 style="font-size: 32px; color: #f2e6d5; text-align: center; margin: 0 0 40px 0; font-style: italic;">LEAGUE HISTORY</h3>
+            
+            <div style="position: relative; border-left: 2px solid #b38b4d; margin: 0 auto; max-width: 800px; padding-left: 30px;">
+                <div style="position: relative; margin-bottom: 40px;">
+                    <div style="position: absolute; left: -37px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #b38b4d; border: 4px solid #0b0c10;"></div>
+                    <span style="color: #b38b4d; font-size: 18px; font-weight: bold; font-family: monospace;">2026</span>
+                    <h4 style="color: #f2e6d5; margin: 5px 0; font-size: 18px;">6개 구단 체제 돌입 및 미디어데이 개최</h4>
+                    <p style="color: #8a7a5f; font-size: 14px; margin: 0;">전국 단위 연고지 매칭 완료 및 공식 개막전 스케줄 확정.</p>
+                </div>
+                <div style="position: relative; margin-bottom: 40px;">
+                    <div style="position: absolute; left: -37px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #b38b4d; border: 4px solid #0b0c10;"></div>
+                    <span style="color: #b38b4d; font-size: 18px; font-weight: bold; font-family: monospace;">2025</span>
+                    <h4 style="color: #f2e6d5; margin: 5px 0; font-size: 18px;">한국 레이드 리그(KRL) 사단법인 출범</h4>
+                    <p style="color: #8a7a5f; font-size: 14px; margin: 0;">프로 레이드 이스포츠화를 위한 연맹 창설 및 초대 총재 선임.</p>
+                </div>
+                <div style="position: relative;">
+                    <div style="position: absolute; left: -37px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: #b38b4d; border: 4px solid #0b0c10;"></div>
+                    <span style="color: #b38b4d; font-size: 18px; font-weight: bold; font-family: monospace;">2024</span>
+                    <h4 style="color: #f2e6d5; margin: 5px 0; font-size: 18px;">언더그라운드 클럽 인비테이셔널 성공</h4>
+                    <p style="color: #8a7a5f; font-size: 14px; margin: 0;">KRL의 모태가 된 전국 레이더 대항전의 대흥행으로 발판 마련.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ticket" style="padding: 100px 40px; background: linear-gradient(180deg, #0b0c10 0%, #050507 100%); text-align: center; border-top: 1px solid #222; scroll-margin-top: 80px;">
+            <div style="max-width: 600px; margin: 0 auto; background: rgba(22, 22, 24, 0.6); padding: 40px; border: 1px solid #b38b4d; border-radius: 12px; box-shadow: 0 0 30px rgba(179,139,77,0.15);">
+                <span style="color: #b38b4d; font-size: 13px; font-weight: bold; letter-spacing: 2px; display: block; margin-bottom: 10px;">TICKET OPEN</span>
+                <h3 style="font-size: 28px; color: #f2e6d5; margin: 0 0 15px 0;">2026 KRL 정규시즌 티켓 예매</h3>
+                <p style="color: #8a7a5f; font-size: 15px; margin: 0 0 30px 0;">영웅들의 위대한 서사가 눈앞에서 펼쳐집니다.<br>현장의 전율을 가장 가까운 좌석에서 경험하세요.</p>
+                <button style="background: #b38b4d; color: #0b0c10; border: none; padding: 14px 40px; font-size: 16px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 15px rgba(179,139,77,0.4);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    Gen.it 바로가기 🎟️
+                </button>
             </div>
         </section>
 
@@ -99,11 +350,13 @@
                 <a href="#" style="color: #555; text-decoration: none; margin: 0 15px; font-size: 13px; font-weight: bold;">개인정보처리방침</a>
                 <a href="#" style="color: #555; text-decoration: none; margin: 0 15px; font-size: 13px;">이메일무단수집거부</a>
             </div>
-            <p style="font-size: 12px; color: #444;">(주) KRL 엔터테인먼트 | 대표이사: 베르나르드 | 사업자등록번호: 202-26-00041</p>
+            <p style="font-size: 12px; color: #444;">재단법인 KRL | 대표이사: 제번 | 사업자등록번호: 123-45-67890</p>
             <p style="font-size: 11px; color: #333; margin-top: 10px;">COPYRIGHT © 2026 KRL ALL RIGHTS RESERVED.</p>
         </footer>
 
-    </div> <script>
+    </div> 
+    
+    <script>
         var audio = document.getElementById('krlThemeAudio');
         var playBtn = document.getElementById('playBtn');
         var playIcon = document.getElementById('playIcon');
@@ -173,4 +426,4 @@
         setInterval(changeSlide, 3000);
     </script>
 
-</div> ```
+</div>
