@@ -1,6 +1,7 @@
 <div style="width: 100%; max-width: 1200px; margin: 0 auto; background-color: #0b0c10; font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #d1c1a8; line-height: 1.6;">
 
-    <!-- 상단 GNB (내비게이션 바) -->
+    <audio id="krlThemeAudio" src="https://github.com/liovelev518-star/index/blob/main/ff.mp3"></audio>
+
     <nav style="display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: rgba(0,0,0,0.9); border-bottom: 1px solid #b38b4d;">
         <div style="font-size: 24px; font-weight: bold; color: #f2e6d5; letter-spacing: -1px;">
             KRL <span style="color: #b38b4d;">OFFICIAL</span>
@@ -14,23 +15,25 @@
         </div>
     </nav>
 
-    <!-- 메인 비주얼 배너 (Hero Section) -->
     <section style="position: relative; width: 100%; height: 500px; overflow: hidden; background-color: #000;">
         <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/F2/G3.webp?v=19" alt="KRL 메인 전장" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
             <h2 style="font-size: 56px; color: #ffffff; margin: 0; text-shadow: 0 0 30px rgba(179,139,77,0.8); font-style: italic; letter-spacing: -2px;">WE ARE THE HONOR,<br>WE ARE THE RAIDERS!</h2>
             <p style="font-size: 20px; color: #d1c1a8; margin-top: 20px; font-weight: 300;">옛 영웅들의 신화적 격돌과 각축전이 벌어지는 이곳은, 한국 레이드 리그입니다!</p>
+            
             <div style="margin-top: 30px;">
-                <a href="#" style="display: inline-block; padding: 12px 35px; background-color: #b38b4d; color: #0b0c10; text-decoration: none; font-weight: bold; font-size: 16px; border-radius: 2px;">티켓 예매하기</a>
+                <button id="playBtn" onclick="toggleAudio()" style="display: inline-block; padding: 12px 35px; background-color: #b38b4d; color: #0b0c10; border: none; font-weight: bold; font-size: 16px; border-radius: 2px; box-shadow: 0 4px 15px rgba(179,139,77,0.4); cursor: pointer; transition: all 0.2s;">
+                    ▶ KRL 주제가 재생
+                </button>
+                <p style="margin-top: 10px; font-size: 12px; color: #8a7a5f; font-style: italic;">* 주제가: Lacrimosa & La Campanella Arrange</p>
             </div>
         </div>
-        <!-- 배너 슬라이드 인디케이터 (데코레이션) -->
+        
         <div style="position: absolute; bottom: 30px; right: 40px; color: #fff; font-size: 14px; letter-spacing: 2px;">
             <span style="color: #b38b4d; font-weight: bold;">01</span> / 04
         </div>
     </section>
 
-    <!-- 리그 뉴스 및 하이라이트 섹션 -->
     <section style="padding: 60px 40px; background: #0b0c10;">
         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 10px;">
             <h3 style="font-size: 28px; color: #f2e6d5; margin: 0;">LATEST NEWS</h3>
@@ -38,7 +41,6 @@
         </div>
         
         <div style="display: flex; gap: 20px;">
-            <!-- 뉴스 카드 1 -->
             <div style="flex: 1; background: #161618; border: 1px solid #2a2a2e;">
                 <div style="height: 180px; background: #333; overflow: hidden;">
                     <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/KRL.webp?v=19" alt="News" style="width: 100%; height: 100%; object-fit: cover;">
@@ -49,7 +51,6 @@
                     <p style="font-size: 14px; color: #8a7a5f;">2026 정규시즌과 포스트시즌, 한국시리즈의 최종 결과는 어떻게 될까요? 예리한 분석 감각을 가지신 KRL 팔로워 여러분들의 선택을 공유하세요. 최후까지 생존하신 팔로워 님들께는 한정판 사인 굿즈를 제공해 드립니다!</p>
                 </div>
             </div>
-            <!-- 뉴스 카드 2 -->
             <div style="flex: 1; background: #161618; border: 1px solid #2a2a2e;">
                 <div style="height: 180px; background: #333; overflow: hidden;">
                     <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/cer.webp?v=19" alt="News" style="width: 100%; height: 100%; object-fit: cover;">
@@ -63,7 +64,6 @@
         </div>
     </section>
 
-    <!-- 하단 푸터 -->
     <footer style="padding: 50px 40px; background-color: #050507; border-top: 1px solid #222; text-align: center;">
         <div style="margin-bottom: 20px;">
             <a href="#" style="color: #555; text-decoration: none; margin: 0 15px; font-size: 13px;">이용약관</a>
@@ -73,5 +73,23 @@
         <p style="font-size: 12px; color: #444;">(주) KRL 엔터테인먼트 | 대표이사: 베르나르드 | 사업자등록번호: 202-26-00041</p>
         <p style="font-size: 11px; color: #333; margin-top: 10px;">COPYRIGHT © 2026 KRL ALL RIGHTS RESERVED.</p>
     </footer>
+
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById('krlThemeAudio');
+            var btn = document.getElementById('playBtn');
+            
+            if (audio.paused) {
+                audio.play();
+                btn.innerHTML = '❚❚ KRL 주제가 일시정지';
+                btn.style.backgroundColor = '#e6c280'; // 활성화 시 버튼 색상 살짝 변경
+            } else {
+                audio.canvas
+                audio.pause();
+                btn.innerHTML = '▶ KRL 주제가 재생';
+                btn.style.backgroundColor = '#b38b4d';
+            }
+        }
+    </script>
 
 </div>
