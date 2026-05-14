@@ -16,48 +16,48 @@
     </nav>
 
     <section style="position: relative; width: 100%; height: 500px; overflow: hidden; background-color: #000;">
-        <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/F2/G3.webp?v=19" alt="KRL 메인 전장" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;">
-            <h2 style="font-size: 56px; color: #ffffff; margin: 0; text-shadow: 0 0 30px rgba(179,139,77,0.8); font-style: italic; letter-spacing: -2px;">WE ARE THE HONOR,<br>WE ARE THE RAIDERS!</h2>
-            <p style="font-size: 20px; color: #d1c1a8; margin-top: 20px; font-weight: 300;">옛 영웅들의 신화적 격돌과 각축전이 벌어지는 이곳은, 한국 레이드 리그입니다!</p>
+        <div id="slideContainer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+            <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/F2/G3.webp?v=19" alt="KRL 메인 전장 1" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.8s ease-in-out; z-index: 1;">
+            <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/E2/G3.webp?v=19" alt="KRL 메인 전장 2" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
+            <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/D4/G3.webp?v=19" alt="KRL 메인 전장 3" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
+            <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/F4/G3.webp?v=19" alt="KRL 메인 전장 4" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1; filter: hue-rotate(90deg);">
+        </div>
+
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%; z-index: 2; pointer-events: auto;">
+            <h2 style="font-size: 56px; color: #ffffff; margin: 0; text-shadow: 0 0 30px rgba(179,139,77,0.8); font-style: italic; letter-spacing: -2px;">WE ARE THE HONOR,<br>WE ARE THE RAIDERS!</h2><br>
+            <h2 style="font-size: 25px; color: #ffffff; margin: 0; text-shadow: 0 0 30px rgba(179,139,77,0.8); font-style: italic; letter-spacing: -2px;">옛 영웅들의 신화적 격돌과 각축전이 벌어지는 이곳은, 한국 레이드 리그입니다!</h2>
             
             <div style="margin-top: 30px;">
-                <!-- MP3 플레이어 섹션 -->
-<div style="margin: 30px auto 0; max-width: 500px; background: rgba(0,0,0,0.6); padding: 25px; border-radius: 15px; border: 1px solid #333; backdrop-filter: blur(5px);">
-    <!-- 곡 정보 -->
-    <div style="text-align: center; margin-bottom: 20px;">
-        <span style="color: #b38b4d; font-size: 12px; font-weight: bold; letter-spacing: 2px; display: block; margin-bottom: 5px;">NOW PLAYING</span>
-        <h3 style="margin: 0; font-size: 18px; color: #f2e6d5; letter-spacing: 1px;">KRL OFFICIAL THEME : Shall We Dance?</h3>
-    </div>
+                <div style="margin: 30px auto 0; max-width: 500px; background: rgba(0,0,0,0.6); padding: 25px; border-radius: 15px; border: 1px solid #333; backdrop-filter: blur(5px);">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <span style="color: #b38b4d; font-size: 12px; font-weight: bold; letter-spacing: 2px; display: block; margin-bottom: 5px;">NOW PLAYING</span>
+                        <h3 style="margin: 0; font-size: 18px; color: #f2e6d5; letter-spacing: 1px;">KRL OFFICIAL THEME : Shall We Dance?</h3>
+                    </div>
 
-    <!-- 진행 바 (Progress Bar) -->
-    <div style="width: 100%; height: 4px; background: #333; border-radius: 2px; position: relative; cursor: pointer;" id="progressContainer">
-        <div id="progressBar" style="width: 0%; height: 100%; background: #b38b4d; border-radius: 2px; position: relative;">
-            <div style="position: absolute; right: -5px; top: -3px; width: 10px; height: 10px; background: #f2e6d5; border-radius: 50%; box-shadow: 0 0 10px #b38b4d;"></div>
-        </div>
-    </div>
+                    <div style="width: 100%; height: 4px; background: #333; border-radius: 2px; position: relative; cursor: pointer;" id="progressContainer">
+                        <div id="progressBar" style="width: 0%; height: 100%; background: #b38b4d; border-radius: 2px; position: relative;">
+                            <div style="position: absolute; right: -5px; top: -3px; width: 10px; height: 10px; background: #f2e6d5; border-radius: 50%; box-shadow: 0 0 10px #b38b4d;"></div>
+                        </div>
+                    </div>
 
-    <!-- 시간 표시 -->
-    <div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 11px; color: #8a7a5f; font-family: monospace;">
-        <span id="currentTime">0:00</span>
-        <span id="durationText">0:00</span>
-    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 11px; color: #8a7a5f; font-family: monospace;">
+                        <span id="currentTime">0:00</span>
+                        <span id="durationText">0:00</span>
+                    </div>
 
-    <!-- 컨트롤 버튼 -->
-    <div style="display: flex; align-items: center; justify-content: center; gap: 30px; margin-top: 15px;">
-        <button style="background: none; border: none; color: #555; cursor: pointer; font-size: 18px;">⏮</button>
-        <button id="playBtn" onclick="toggleAudio()" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #b38b4d; background: none; color: #b38b4d; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s;">
-            <span id="playIcon" style="font-size: 20px; margin-left: 3px;">▶</span>
-        </button>
-        <button style="background: none; border: none; color: #555; cursor: pointer; font-size: 18px;">⏭</button>
-    </div>
-</div>
-              
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 30px; margin-top: 15px;">
+                        <button style="background: none; border: none; color: #555; cursor: pointer; font-size: 18px;">⏮</button>
+                        <button id="playBtn" onclick="toggleAudio()" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #b38b4d; background: none; color: #b38b4d; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s;">
+                            <span id="playIcon" style="font-size: 20px; margin-left: 3px;">▶</span>
+                        </button>
+                        <button style="background: none; border: none; color: #555; cursor: pointer; font-size: 18px;">⏭</button>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <div style="position: absolute; bottom: 30px; right: 40px; color: #fff; font-size: 14px; letter-spacing: 2px;">
-            <span style="color: #b38b4d; font-weight: bold;">01</span> / 04
+        <div style="position: absolute; bottom: 30px; right: 40px; color: #fff; font-size: 14px; letter-spacing: 2px; z-index: 3;">
+            <span id="slidePageNum" style="color: #b38b4d; font-weight: bold;">01</span> / 04
         </div>
     </section>
 
@@ -102,71 +102,83 @@
     </footer>
 
     <script>
+        // --- 1. 오디오 플레이어 스크립트 ---
         var audio = document.getElementById('krlThemeAudio');
-var playBtn = document.getElementById('playBtn');
-var playIcon = document.getElementById('playIcon');
-var progressBar = document.getElementById('progressBar');
-var progressContainer = document.getElementById('progressContainer');
-var currentTimeEl = document.getElementById('currentTime');
-var durationTextEl = document.getElementById('durationText');
+        var playBtn = document.getElementById('playBtn');
+        var playIcon = document.getElementById('playIcon');
+        var progressBar = document.getElementById('progressBar');
+        var progressContainer = document.getElementById('progressContainer');
+        var currentTimeEl = document.getElementById('currentTime');
+        var durationTextEl = document.getElementById('durationText');
 
-// 재생/일시정지 토글
-function toggleAudio() {
-    if (audio.paused) {
-        audio.play();
-        playIcon.innerHTML = '❚❚';
-        playIcon.style.marginLeft = '0px';
-        playBtn.style.backgroundColor = 'rgba(179,139,77,0.1)';
-    } else {
-        audio.pause();
-        playIcon.innerHTML = '▶';
-        playIcon.style.marginLeft = '3px';
-        playBtn.style.backgroundColor = 'transparent';
-    }
-}
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                playIcon.innerHTML = '❚❚';
+                playIcon.style.marginLeft = '0px';
+                playBtn.style.backgroundColor = 'rgba(179,139,77,0.1)';
+            } else {
+                audio.pause();
+                playIcon.innerHTML = '▶';
+                playIcon.style.marginLeft = '3px';
+                playBtn.style.backgroundColor = 'transparent';
+            }
+        }
 
-// 시간 포맷팅 (0:00 형식)
-function formatTime(seconds) {
-    var min = Math.floor(seconds / 60);
-    var sec = Math.floor(seconds % 60);
-    return min + ":" + (sec < 10 ? "0" + sec : sec);
-}
+        function formatTime(seconds) {
+            var min = Math.floor(seconds / 60);
+            var sec = Math.floor(seconds % 60);
+            return min + ":" + (sec < 10 ? "0" + sec : sec);
+        }
 
-// 오디오 데이터 로드 시 총 시간 표시
-audio.addEventListener('loadedmetadata', function() {
-    durationTextEl.innerHTML = formatTime(audio.duration);
-});
+        audio.addEventListener('loadedmetadata', function() {
+            durationTextEl.innerHTML = formatTime(audio.duration);
+        });
 
-// 재생 중 진행 바 업데이트
-audio.addEventListener('timeupdate', function() {
-    var percent = (audio.currentTime / audio.duration) * 100;
-    progressBar.style.width = percent + "%";
-    currentTimeEl.innerHTML = formatTime(audio.currentTime);
-});
+        audio.addEventListener('timeupdate', function() {
+            var percent = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = percent + "%";
+            currentTimeEl.innerHTML = formatTime(audio.currentTime);
+        });
 
-// 진행 바 클릭 시 이동
-// 진행 바 클릭 시 이동 (보완된 코드)
-progressContainer.addEventListener('click', function(e) {
-    // progressContainer의 전체 가로폭
-    var width = this.clientWidth;
-    
-    // 요소의 페이지 내 실제 왼쪽 좌표를 구하여 마우스 클릭 위치에서 뺍니다.
-    var rect = this.getBoundingClientRect();
-    var clickX = e.clientX - rect.left;
-    
-    var duration = audio.duration;
-    
-    // 정상적으로 음원 총 길이가 로드되었을 때만 이동
-    if (duration) {
-        audio.currentTime = (clickX / width) * duration;
-    }
-});
+        progressContainer.addEventListener('click', function(e) {
+            var width = this.clientWidth;
+            var rect = this.getBoundingClientRect();
+            var clickX = e.clientX - rect.left;
+            var duration = audio.duration;
+            if (duration) {
+                audio.currentTime = (clickX / width) * duration;
+            }
+        });
 
-// 재생 종료 시 초기화
-audio.addEventListener('ended', function() {
-    playIcon.innerHTML = '▶';
-    progressBar.style.width = "0%";
-});
+        audio.addEventListener('ended', function() {
+            playIcon.innerHTML = '▶';
+            progressBar.style.width = "0%";
+        });
+
+        // --- 2. 이미지 롤링 슬라이더 스크립트 (추가됨) ---
+        var slides = document.querySelectorAll('.main-slide');
+        var pageNumEl = document.getElementById('slidePageNum');
+        var currentSlideIndex = 0;
+        var totalSlides = slides.length;
+
+        function changeSlide() {
+            // 현재 슬라이드 숨기기 (투명도 0)
+            slides[currentSlideIndex].style.opacity = 0;
+            
+            // 다음 슬라이드 인덱스 계산
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+            
+            // 다음 슬라이드 보이기 (투명도 0.6)
+            slides[currentSlideIndex].style.opacity = 0.6;
+            
+            // 우측 하단 숫자 업데이트 (ex: 01, 02...)
+            var displayNum = currentSlideIndex + 1;
+            pageNumEl.innerHTML = displayNum < 10 ? "0" + displayNum : displayNum;
+        }
+
+        // 3초(3000ms)마다 changeSlide 함수 반복 실행
+        setInterval(changeSlide, 3000);
     </script>
 
 </div>
