@@ -1,4 +1,10 @@
-<nav style="position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: rgba(11, 12, 16, 0.95); border-bottom: 1px solid #b38b4d; backdrop-filter: blur(10px);">
+<div style="width: 100%; background-color: #050507; margin: 0; padding: 0;">
+
+    <div style="width: 100%; max-width: 1200px; margin: 0 auto; background-color: #0b0c10; font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #d1c1a8; line-height: 1.6; scroll-behavior: smooth;">
+
+        <audio id="krlThemeAudio" src="ff.mp3"></audio>
+
+        <nav style="position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: rgba(11, 12, 16, 0.95); border-bottom: 1px solid #b38b4d; backdrop-filter: blur(10px);">
             <div style="font-size: 24px; font-weight: bold; color: #f2e6d5; letter-spacing: -1px; cursor: pointer;" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
                 KRL <span style="color: #b38b4d;">OFFICIAL</span>
             </div>
@@ -19,7 +25,7 @@
                 <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/A4/G3.webp?v=22" alt="KRL 메인 전장 4" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
                 <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/B1/G3.webp?v=22" alt="KRL 메인 전장 5" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
                 <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/B2/G3.webp?v=22" alt="KRL 메인 전장 6" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
-                <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/B3/G3.webp?v=22.webp?v=20" alt="KRL 메인 전장 7" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
+                <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/B3/G3.webp?v=20" alt="KRL 메인 전장 7" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
                 <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/B4/G3.webp?v=22" alt="KRL 메인 전장 8" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
                 <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/C1/G3.webp?v=22" alt="KRL 메인 전장 9" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
                 <img class="main-slide" src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/C2/G3.webp?v=22" alt="KRL 메인 전장 10" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 1;">
@@ -42,6 +48,10 @@
             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%; z-index: 2; pointer-events: none;">
                 <h2 style="font-size: 56px; color: #ffffff; margin: 0; text-shadow: 0 0 30px rgba(179,139,77,0.8); font-style: italic; letter-spacing: -2px;">WE ARE THE HONOR,<br>WE ARE THE RAIDERS!</h2><br>
                 <h2 style="font-size: 25px; color: #ffffff; margin: 0; text-shadow: 0 0 30px rgba(179,139,77,0.8); font-style: italic; letter-spacing: -2px;">영웅들의 신화적인 각축전이 벌어지는 이곳은, 대한민국 레이드 리그입니다!</h2>
+            </div>
+
+            <div style="position: absolute; bottom: 30px; right: 40px; color: #fff; font-size: 14px; letter-spacing: 2px; z-index: 3; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                <span id="slidePageNum" style="color: #b38b4d; font-weight: bold;">01</span> / 24
             </div>
         </section>
 
@@ -77,8 +87,7 @@
                 <div style="font-size: 11px; font-weight: bold; color: #b38b4d; letter-spacing: 1px; margin-bottom: 10px;">TRACKLIST</div>
                 
                 <div id="playlistContainer" style="display: flex; flex-direction: column; gap: 5px; max-height: 165px; overflow-y: auto; padding-right: 5px;">
-                    
-                    <div class="track-item active-track" data-src="ff.mp3" data-title="KRL 공식 테마곡 :: 「STAND OFF」" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: rgba(179,139,77,0.15); border: 1px solid #b38b4d; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
+                    <div class="track-item" data-src="ff.mp3" data-title="KRL 공식 테마곡 :: 「STAND OFF」" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: rgba(179,139,77,0.15); border: 1px solid #b38b4d; border-radius: 6px; cursor: pointer; transition: all 0.2s;">
                         <span style="font-size: 12px; color: #f2e6d5; font-weight: bold;">01. KRL 공식 테마곡 :: STAND OFF</span>
                         <span class="track-status" style="font-size: 10px; color: #b38b4d; font-family: monospace; font-weight: bold;">PLAYING</span>
                     </div>
@@ -114,44 +123,204 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
+        <section style="display: block; width: 100%; max-width: 1200px; margin: 0 auto; padding: 60px 40px; background-color: #0b0c10; box-sizing: border-box; clear: both;">
             
-            <div style="position: absolute; bottom: 30px; right: 40px; color: #fff; font-size: 14px; letter-spacing: 2px; z-index: 3;">
-                <span id="slidePageNum" style="color: #b38b4d; font-weight: bold;">01</span> / 24
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 10px;">
+                <h3 style="font-size: 28px; color: #f2e6d5; margin: 0; letter-spacing: 1px; font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;">LATEST NEWS</h3>
+                <a href="#" style="color: #8a7a5f; text-decoration: none; font-size: 14px; transition: color 0.2s;" onmouseover="this.style.color='#b38b4d'" onmouseout="this.style.color='#8a7a5f'">전체보기 +</a>
+            </div>
+            
+            <div style="display: flex; gap: 24px; align-items: stretch; background-color: #0b0c10;">
+                
+                <div style="flex: 1; background: #161618; border: 1px solid #2a2a2e; display: flex; flex-direction: column; border-radius: 8px; overflow: hidden; transition: transform 0.3s, border-color 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='#b38b4d';" onmouseout="this.style.transform='none'; this.style.borderColor='#2a2a2e';">
+                    <div style="width: 100%; height: 240px; background: #000; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/KRL.webp?v=19" alt="News" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column; background: #161618;">
+                        <span style="color: #b38b4d; font-size: 12px; font-weight: bold; letter-spacing: 1px;">EVENT</span>
+                        <h4 style="margin: 12px 0; color: #f2e6d5; font-size: 19px; font-weight: bold; line-height: 1.4;">승부 예측 이벤트 페이지 개설 안내</h4>
+                        <p style="font-size: 14px; color: #8a7a5f; margin: 0; line-height: 1.6; text-align: justify;">완연한 봄이 도래하며 마침내 2036시즌 KRL이 지척까지 다가왔습니다.<br><br>올해 정규 시즌과 포스트 시즌, 한국 시리즈의 최종 결과는 어떻게 될까요? 예리한 분석 감각을 가지신 KRL 팔로워 여러분들의 선택을 공유하세요. 최종 생존하신 분들에게는 KRL과 각 구단들이 협업하여 제작한 한정판 특별 굿즈들을 증정해 드립니다!</p>
+                    </div>
+                </div>
+
+                <div style="flex: 1; background: #161618; border: 1px solid #2a2a2e; display: flex; flex-direction: column; border-radius: 8px; overflow: hidden; transition: transform 0.3s, border-color 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='#b38b4d';" onmouseout="this.style.transform='none'; this.style.borderColor='#2a2a2e';">
+                    <div style="width: 100%; height: 240px; background: #000; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/cer.webp?v=19" alt="News" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column; background: #161618;">
+                        <span style="color: #b38b4d; font-size: 12px; font-weight: bold; letter-spacing: 1px;">NOTICE</span>
+                        <h4 style="margin: 12px 0; color: #f2e6d5; font-size: 19px; font-weight: bold; line-height: 1.4;">KRL 정규 시즌 개막전 일정 알림</h4>
+                        <p style="font-size: 14px; color: #8a7a5f; margin: 0; line-height: 1.6; text-align: justify;">
+                            오래 기다리셨습니다, KRL 팔로워 여러분! 오는 2036년 4월 5일, 전투 준비를 마친 신화적 존재와 영웅들이 서울-대전-대구-부산-인천-광주에서 격돌합니다! 포스트 시즌 진출을 향해 당당히 포문을 연 6개 구단에 응원의 메시지를 보내주세요.
+                        </p>
+                        
+                        <div style="margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.4); border-radius: 6px; font-size: 13px; color: #d1c1a8; line-height: 1.7; border-left: 3px solid #b38b4d;">
+                            <strong style="color: #f2e6d5; display: block; margin-bottom: 4px;">◀ 4월 5일 1부 경기 ▶</strong>
+                            [홈] 대구 vs 서울 [원정] 🗺️ 라이온즈 필드<br>
+                            [홈] 부산 vs 대전 [원정] 🗺️ 사직 아일랜드<br>
+                            [홈] 광주 vs 인천 [원정] 🗺️ 챔피언스 마운틴
+                            
+                            <strong style="color: #f2e6d5; display: block; margin: 12px 0 4px 0;">◀ 4월 5일 2부 경기 ▶</strong>
+                            [홈] 서울 vs 대구 [원정] 🗺️ 잠실 미르 스타디움<br>
+                            [홈] 대전 vs 부산 [원정] 🗺️ 이글스 레어<br>
+                            [홈] 인천 vs 광주 [원정] 🗺️ 랜더스 홀리 생추어리
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <section style="padding: 60px 40px; background: #0b0c10;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 10px;">
-                <h3 style="font-size: 28px; color: #f2e6d5; margin: 0;">LATEST NEWS</h3>
-                <a href="#" style="color: #8a7a5f; text-decoration: none; font-size: 14px;">전체보기 +</a>
-            </div>
-            
-            <div style="display: flex; gap: 20px; align-items: stretch;">
-                <div style="flex: 1; background: #161618; border: 1px solid #2a2a2e; display: flex; flex-direction: column;">
-                    <div style="width: 100%; display: flex; align-items: center; justify-content: center; background: #000; overflow: hidden;">
-                        <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/KRL.webp?v=19" alt="News" style="width: 100%; height: auto; display: block; object-fit: contain;">
-                    </div>
-                    <div style="padding: 20px; flex-grow: 1;">
-                        <span style="color: #b38b4d; font-size: 12px; font-weight: bold;">EVENT</span>
-                        <h4 style="margin: 10px 0; color: #f2e6d5; font-size: 18px;">승부 예측 이벤트 페이지 개설 안내</h4>
-                        <p style="font-size: 14px; color: #8a7a5f; margin: 0;">2036 정규 시즌과 포스트 시즌, 한국 시리즈의 최종 결과는 어떻게 될까요? 예리한 분석 감각을 가지신 KRL 팔로워 여러분들의 선택을 공유하세요. 최종 생존하신 분들에게는 특별한 KRL 굿즈를 증정해 드립니다.</p>
-                    </div>
-                </div>
+    </div>
+</div>
 
-                <div style="flex: 1; background: #161618; border: 1px solid #2a2a2e; display: flex; flex-direction: column;">
-                    <div style="width: 100%; display: flex; align-items: center; justify-content: center; background: #000; overflow: hidden;">
-                        <img src="https://d3lna1f15u7pcs.cloudfront.net/media/characters/c0b99e76-5ce4-4ece-97bf-476337705474/assets/cer.webp?v=19" alt="News" style="width: 100%; height: auto; display: block; object-fit: contain;">
-                    </div>
-                    <div style="padding: 20px; flex-grow: 1;">
-                        <span style="color: #b38b4d; font-size: 12px; font-weight: bold;">NOTICE</span>
-                        <h4 style="margin: 10px 0; color: #f2e6d5; font-size: 18px;">KRL 정규 시즌 개막전 일정 알림</h4>
-                        <p style="font-size: 14px; color: #8a7a5f; margin: 0;">오래 기다리셨습니다, KRL 팔로워 여러분! 오는 2036년 4월 5일, 마침내 영웅들이 서울-대전-대구-부산-인천-광주에서 격돌합니다! 포스트 시즌 진출을 향해 당당히 포문을 연 6개 구단에 응원의 메시지를 보내주세요. <br><br>◀ 4월 5일 1부 경기 ▶<br>[홈] 대구 vs 서울 [원정] 🗺️ 대구 라이온즈 필드<br>[홈] 부산 vs 대전 [원정] 🗺️ 부산 사직 아일랜드<br>[홈] 광주 vs 인천 [원정] 🗺️ 광주 챔피언스 마운틴<br><br>◀ 4월 5일 2부 경기 ▶<br>[홈] 서울 vs 대구 [원정] 🗺️ 서울 잠실 미르 스타디움<br>[홈] 대전 vs 부산 [원정] 🗺️ 대전 이글스 레어<br>[홈] 인천 vs 광주 [원정] 🗺️ 인천 랜더스 홀리 생추어리</p>
-                    </div>
-                </div>
-            </div>
-       </section>
+<script>
+    var audio = document.getElementById('krlThemeAudio');
+    var playBtn = document.getElementById('playBtn');
+    var playIcon = document.getElementById('playIcon');
+    var progressBar = document.getElementById('progressBar');
+    var progressContainer = document.getElementById('progressContainer');
+    var currentTimeEl = document.getElementById('currentTime');
+    var durationTextEl = document.getElementById('durationText');
+    
+    var currentTrackTitle = document.getElementById('currentTrackTitle');
+    var trackItems = document.querySelectorAll('.track-item');
+    var currentTrackIndex = 0;
+
+    updatePlaylistUI(0);
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play().catch(function(e) { console.log("재생 제한 확인:", e); });
+            playIcon.innerHTML = '❚❚';
+            playIcon.style.marginLeft = '0px';
+            playBtn.style.backgroundColor = 'rgba(179,139,77,0.1)';
+        } else {
+            audio.pause();
+            playIcon.innerHTML = '▶';
+            playIcon.style.marginLeft = '3px';
+            playBtn.style.backgroundColor = 'transparent';
+        }
+    }
+
+    function updatePlaylistUI(selectedIndex) {
+        trackItems.forEach(function(item, index) {
+            if (index === selectedIndex) {
+                item.style.background = 'rgba(179,139,77,0.15)';
+                item.style.borderColor = '#b38b4d';
+                item.querySelector('span:first-child').style.color = '#f2e6d5';
+                item.querySelector('span:first-child').style.fontWeight = 'bold';
+                var statusEl = item.querySelector('.track-status');
+                statusEl.innerHTML = 'PLAYING';
+                statusEl.style.color = '#b38b4d';
+                statusEl.style.fontWeight = 'bold';
+            } else {
+                item.style.background = 'rgba(0,0,0,0.3)';
+                item.style.borderColor = '#222';
+                item.querySelector('span:first-child').style.color = '#d1c1a8';
+                item.querySelector('span:first-child').style.fontWeight = 'normal';
+                var statusEl = item.querySelector('.track-status');
+                statusEl.innerHTML = 'READY';
+                statusEl.style.color = '#555';
+                statusEl.style.fontWeight = 'normal';
+            }
+        });
+    }
+
+    function selectTrack(index) {
+        if (index < 0 || index >= trackItems.length) return;
+        
+        currentTrackIndex = index;
+        var selectedItem = trackItems[currentTrackIndex];
+        var newSrc = selectedItem.getAttribute('data-src');
+        var newTitle = selectedItem.getAttribute('data-title');
+        
+        currentTrackTitle.innerHTML = newTitle;
+        audio.src = newSrc;
+        audio.load();
+        
+        updatePlaylistUI(currentTrackIndex);
+
+        audio.play().then(function() {
+            playIcon.innerHTML = '❚❚';
+            playIcon.style.marginLeft = '0px';
+            playBtn.style.backgroundColor = 'rgba(179,139,77,0.1)';
+        }).catch(function(error) {
+            console.log("자동재생 유의:", error);
+        });
+    }
+
+    function prevTrack() {
+        var nextIndex = currentTrackIndex - 1;
+        if (nextIndex < 0) nextIndex = trackItems.length - 1;
+        selectTrack(nextIndex);
+    }
+
+    function nextTrack() {
+        var nextIndex = (currentTrackIndex + 1) % trackItems.length;
+        selectTrack(nextIndex);
+    }
+
+    trackItems.forEach(function(item, index) {
+        item.addEventListener('click', function() {
+            selectTrack(index);
+        });
+    });
+
+    function formatTime(seconds) {
+        if (isNaN(seconds)) return "0:00";
+        var min = Math.floor(seconds / 60);
+        var sec = Math.floor(seconds % 60);
+        return min + ":" + (sec < 10 ? "0" + sec : sec);
+    }
+
+    audio.addEventListener('loadedmetadata', function() {
+        durationTextEl.innerHTML = formatTime(audio.duration);
+    });
+
+    audio.addEventListener('timeupdate', function() {
+        if (audio.duration) {
+            var percent = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = percent + "%";
+            currentTimeEl.innerHTML = formatTime(audio.currentTime);
+        }
+    });
+
+    progressContainer.addEventListener('click', function(e) {
+        var width = this.clientWidth;
+        var rect = this.getBoundingClientRect();
+        var clickX = e.clientX - rect.left;
+        var duration = audio.duration;
+        if (duration) {
+            audio.currentTime = (clickX / width) * duration;
+        }
+    });
+
+    audio.addEventListener('ended', function() {
+        nextTrack();
+    });
+
+    var slides = document.querySelectorAll('.main-slide');
+    var pageNumEl = document.getElementById('slidePageNum');
+    var currentSlideIndex = 0;
+    var totalSlides = slides.length;
+
+    function changeSlide() {
+        if(slides.length === 0) return;
+        slides[currentSlideIndex].style.opacity = 0;
+        currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+        slides[currentSlideIndex].style.opacity = 0.6;
+        
+        var displayNum = currentSlideIndex + 1;
+        if(pageNumEl) {
+            pageNumEl.innerHTML = displayNum < 10 ? "0" + displayNum : displayNum;
+        }
+    }
+
+    setInterval(changeSlide, 3000);
+</script>
 
 <section id="about" style="padding: 80px 40px; background: #050507; border-top: 1px solid #222; scroll-margin-top: 80px;">
     <div style="text-align: center; margin-bottom: 5px;">
@@ -719,159 +888,4 @@
         </footer>
 
     </div> 
-    
-    <script>
-    var audio = document.getElementById('krlThemeAudio');
-    var playBtn = document.getElementById('playBtn');
-    var playIcon = document.getElementById('playIcon');
-    var progressBar = document.getElementById('progressBar');
-    var progressContainer = document.getElementById('progressContainer');
-    var currentTimeEl = document.getElementById('currentTime');
-    var durationTextEl = document.getElementById('durationText');
-    
-    // 새로 추가된 멀티 트랙 제어용 변수
-    var currentTrackTitle = document.getElementById('currentTrackTitle');
-    var trackItems = document.querySelectorAll('.track-item');
-    var currentTrackIndex = 0;
-
-    function toggleAudio() {
-        if (audio.paused) {
-            audio.play();
-            playIcon.innerHTML = '❚❚';
-            playIcon.style.marginLeft = '0px';
-            playBtn.style.backgroundColor = 'rgba(179,139,77,0.1)';
-        } else {
-            audio.pause();
-            playIcon.innerHTML = '▶';
-            playIcon.style.marginLeft = '3px';
-            playBtn.style.backgroundColor = 'transparent';
-        }
-    }
-
-    // 트랙 변경 함수
-    function selectTrack(index) {
-        if (index < 0 || index >= trackItems.length) return;
-        
-        currentTrackIndex = index;
-        var selectedItem = trackItems[currentTrackIndex];
-        
-        // 1. 모든 트랙 스타일 초기화
-        trackItems.forEach(function(item) {
-            item.style.background = 'rgba(0,0,0,0.3)';
-            item.style.borderColor = '#222';
-            item.querySelector('span:first-child').style.color = '#d1c1a8';
-            item.querySelector('span:first-child').style.fontWeight = 'normal';
-            
-            var statusEl = item.querySelector('.track-status');
-            statusEl.innerHTML = 'READY';
-            statusEl.style.color = '#555';
-        });
-
-        // 2. 선택된 트랙 하이라이트 스타일 적용
-        selectedItem.style.background = 'rgba(179,139,77,0.15)';
-        selectedItem.style.borderColor = '#b38b4d';
-        selectedItem.querySelector('span:first-child').style.color = '#f2e6d5';
-        selectedItem.querySelector('span:first-child').style.fontWeight = 'bold';
-        
-        var currentStatus = selectedItem.querySelector('.track-status');
-        currentStatus.innerHTML = 'PLAYING';
-        currentStatus.style.color = '#b38b4d';
-
-        // 3. 오디오 소스 변경 및 재생
-        var newSrc = selectedItem.getAttribute('data-src');
-        var newTitle = selectedItem.getAttribute('data-title');
-        
-        currentTrackTitle.innerHTML = newTitle;
-        audio.src = newSrc;
-        audio.load();
-        
-        // 플레이 상태 설정
-        audio.play();
-        playIcon.innerHTML = '❚❚';
-        playIcon.style.marginLeft = '0px';
-        playBtn.style.backgroundColor = 'rgba(179,139,77,0.1)';
-    }
-
-    // ⏮ 이전 곡 버튼 기능
-    function prevTrack() {
-        var nextIndex = currentTrackIndex - 1;
-        if (nextIndex < 0) nextIndex = trackItems.length - 1; // 첫 곡이면 마지막 곡으로
-        selectTrack(nextIndex);
-    }
-
-    // ⏭ 다음 곡 버튼 기능
-    function nextTrack() {
-        var nextIndex = (currentTrackIndex + 1) % trackItems.length; // 마지막 곡이면 첫 곡으로
-        selectTrack(nextIndex);
-    }
-
-    // 트랙 리스트 엘리먼트에 각각 클릭 이벤트 등록
-    trackItems.forEach(function(item, index) {
-        item.addEventListener('click', function() {
-            selectTrack(index);
-        });
-        
-        // 마우스 호버 비주얼 보정
-        item.addEventListener('mouseover', function() {
-            if (currentTrackIndex !== index) {
-                this.style.borderColor = '#b38b4d';
-            }
-        });
-        item.addEventListener('mouseout', function() {
-            if (currentTrackIndex !== index) {
-                this.style.borderColor = '#222';
-            }
-        });
-    });
-
-    function formatTime(seconds) {
-        var min = Math.floor(seconds / 60);
-        var sec = Math.floor(seconds % 60);
-        return min + ":" + (sec < 10 ? "0" + sec : sec);
-    }
-
-    audio.addEventListener('loadedmetadata', function() {
-        durationTextEl.innerHTML = formatTime(audio.duration);
-    });
-
-    audio.addEventListener('timeupdate', function() {
-        if (audio.duration) {
-            var percent = (audio.currentTime / audio.duration) * 100;
-            progressBar.style.width = percent + "%";
-            currentTimeEl.innerHTML = formatTime(audio.currentTime);
-        }
-    });
-
-    progressContainer.addEventListener('click', function(e) {
-        var width = this.clientWidth;
-        var rect = this.getBoundingClientRect();
-        var clickX = e.clientX - rect.left;
-        var duration = audio.duration;
-        if (duration) {
-            audio.currentTime = (clickX / width) * duration;
-        }
-    });
-
-    // 한 곡의 재생이 끝나면 자동으로 다음 곡이 재생되도록 수정
-    audio.addEventListener('ended', function() {
-        nextTrack();
-    });
-
-    // 메인 이미지 슬라이더 기능 (기존 유지)
-    var slides = document.querySelectorAll('.main-slide');
-    var pageNumEl = document.getElementById('slidePageNum');
-    var currentSlideIndex = 0;
-    var totalSlides = slides.length;
-
-    function changeSlide() {
-        slides[currentSlideIndex].style.opacity = 0;
-        currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
-        slides[currentSlideIndex].style.opacity = 0.6;
-        var displayNum = currentSlideIndex + 1;
-        pageNumEl.innerHTML = displayNum < 10 ? "0" + displayNum : displayNum;
-    }
-
-    setInterval(changeSlide, 3000);
-</script>
-
 </div>
