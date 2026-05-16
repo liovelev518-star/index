@@ -173,154 +173,8 @@
             </div>
         </section>
 
-    </div>
-</div>
+   
 
-<script>
-    var audio = document.getElementById('krlThemeAudio');
-    var playBtn = document.getElementById('playBtn');
-    var playIcon = document.getElementById('playIcon');
-    var progressBar = document.getElementById('progressBar');
-    var progressContainer = document.getElementById('progressContainer');
-    var currentTimeEl = document.getElementById('currentTime');
-    var durationTextEl = document.getElementById('durationText');
-    
-    var currentTrackTitle = document.getElementById('currentTrackTitle');
-    var trackItems = document.querySelectorAll('.track-item');
-    var currentTrackIndex = 0;
-
-    updatePlaylistUI(0);
-
-    function toggleAudio() {
-        if (audio.paused) {
-            audio.play().catch(function(e) { console.log("재생 제한 확인:", e); });
-            playIcon.innerHTML = '❚❚';
-            playIcon.style.marginLeft = '0px';
-            playBtn.style.backgroundColor = 'rgba(179,139,77,0.1)';
-        } else {
-            audio.pause();
-            playIcon.innerHTML = '▶';
-            playIcon.style.marginLeft = '3px';
-            playBtn.style.backgroundColor = 'transparent';
-        }
-    }
-
-    function updatePlaylistUI(selectedIndex) {
-        trackItems.forEach(function(item, index) {
-            if (index === selectedIndex) {
-                item.style.background = 'rgba(179,139,77,0.15)';
-                item.style.borderColor = '#b38b4d';
-                item.querySelector('span:first-child').style.color = '#f2e6d5';
-                item.querySelector('span:first-child').style.fontWeight = 'bold';
-                var statusEl = item.querySelector('.track-status');
-                statusEl.innerHTML = 'PLAYING';
-                statusEl.style.color = '#b38b4d';
-                statusEl.style.fontWeight = 'bold';
-            } else {
-                item.style.background = 'rgba(0,0,0,0.3)';
-                item.style.borderColor = '#222';
-                item.querySelector('span:first-child').style.color = '#d1c1a8';
-                item.querySelector('span:first-child').style.fontWeight = 'normal';
-                var statusEl = item.querySelector('.track-status');
-                statusEl.innerHTML = 'READY';
-                statusEl.style.color = '#555';
-                statusEl.style.fontWeight = 'normal';
-            }
-        });
-    }
-
-    function selectTrack(index) {
-        if (index < 0 || index >= trackItems.length) return;
-        
-        currentTrackIndex = index;
-        var selectedItem = trackItems[currentTrackIndex];
-        var newSrc = selectedItem.getAttribute('data-src');
-        var newTitle = selectedItem.getAttribute('data-title');
-        
-        currentTrackTitle.innerHTML = newTitle;
-        audio.src = newSrc;
-        audio.load();
-        
-        updatePlaylistUI(currentTrackIndex);
-
-        audio.play().then(function() {
-            playIcon.innerHTML = '❚❚';
-            playIcon.style.marginLeft = '0px';
-            playBtn.style.backgroundColor = 'rgba(179,139,77,0.1)';
-        }).catch(function(error) {
-            console.log("자동재생 유의:", error);
-        });
-    }
-
-    function prevTrack() {
-        var nextIndex = currentTrackIndex - 1;
-        if (nextIndex < 0) nextIndex = trackItems.length - 1;
-        selectTrack(nextIndex);
-    }
-
-    function nextTrack() {
-        var nextIndex = (currentTrackIndex + 1) % trackItems.length;
-        selectTrack(nextIndex);
-    }
-
-    trackItems.forEach(function(item, index) {
-        item.addEventListener('click', function() {
-            selectTrack(index);
-        });
-    });
-
-    function formatTime(seconds) {
-        if (isNaN(seconds)) return "0:00";
-        var min = Math.floor(seconds / 60);
-        var sec = Math.floor(seconds % 60);
-        return min + ":" + (sec < 10 ? "0" + sec : sec);
-    }
-
-    audio.addEventListener('loadedmetadata', function() {
-        durationTextEl.innerHTML = formatTime(audio.duration);
-    });
-
-    audio.addEventListener('timeupdate', function() {
-        if (audio.duration) {
-            var percent = (audio.currentTime / audio.duration) * 100;
-            progressBar.style.width = percent + "%";
-            currentTimeEl.innerHTML = formatTime(audio.currentTime);
-        }
-    });
-
-    progressContainer.addEventListener('click', function(e) {
-        var width = this.clientWidth;
-        var rect = this.getBoundingClientRect();
-        var clickX = e.clientX - rect.left;
-        var duration = audio.duration;
-        if (duration) {
-            audio.currentTime = (clickX / width) * duration;
-        }
-    });
-
-    audio.addEventListener('ended', function() {
-        nextTrack();
-    });
-
-    var slides = document.querySelectorAll('.main-slide');
-    var pageNumEl = document.getElementById('slidePageNum');
-    var currentSlideIndex = 0;
-    var totalSlides = slides.length;
-
-    function changeSlide() {
-        if(slides.length === 0) return;
-        slides[currentSlideIndex].style.opacity = 0;
-        currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
-        slides[currentSlideIndex].style.opacity = 0.6;
-        
-        var displayNum = currentSlideIndex + 1;
-        if(pageNumEl) {
-            pageNumEl.innerHTML = displayNum < 10 ? "0" + displayNum : displayNum;
-        }
-    }
-
-    setInterval(changeSlide, 3000);
-</script>
 
 <section id="about" style="padding: 80px 40px; background: #050507; border-top: 1px solid #222; scroll-margin-top: 80px;">
     <div style="text-align: center; margin-bottom: 5px;">
@@ -887,5 +741,150 @@
             <p style="font-size: 11px; color: #333; margin-top: 10px;">COPYRIGHT © 2036 KRL ALL RIGHTS RESERVED.</p>
         </footer>
 
-    </div> 
-</div>
+    </div> </div> </div>
+
+<script>
+    var audio = document.getElementById('krlThemeAudio');
+    var playBtn = document.getElementById('playBtn');
+    var playIcon = document.getElementById('playIcon');
+    var progressBar = document.getElementById('progressBar');
+    var progressContainer = document.getElementById('progressContainer');
+    var currentTimeEl = document.getElementById('currentTime');
+    var durationTextEl = document.getElementById('durationText');
+    
+    var currentTrackTitle = document.getElementById('currentTrackTitle');
+    var trackItems = document.querySelectorAll('.track-item');
+    var currentTrackIndex = 0;
+
+    updatePlaylistUI(0);
+
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play().catch(function(e) { console.log("재생 제한 확인:", e); });
+            playIcon.innerHTML = '❚❚';
+            playIcon.style.marginLeft = '0px';
+            playBtn.style.backgroundColor = 'rgba(179,139,77,0.1)';
+        } else {
+            audio.pause();
+            playIcon.innerHTML = '▶';
+            playIcon.style.marginLeft = '3px';
+            playBtn.style.backgroundColor = 'transparent';
+        }
+    }
+
+    function updatePlaylistUI(selectedIndex) {
+        trackItems.forEach(function(item, index) {
+            if (index === selectedIndex) {
+                item.style.background = 'rgba(179,139,77,0.15)';
+                item.style.borderColor = '#b38b4d';
+                item.querySelector('span:first-child').style.color = '#f2e6d5';
+                item.querySelector('span:first-child').style.fontWeight = 'bold';
+                var statusEl = item.querySelector('.track-status');
+                statusEl.innerHTML = 'PLAYING';
+                statusEl.style.color = '#b38b4d';
+                statusEl.style.fontWeight = 'bold';
+            } else {
+                item.style.background = 'rgba(0,0,0,0.3)';
+                item.style.borderColor = '#222';
+                item.querySelector('span:first-child').style.color = '#d1c1a8';
+                item.querySelector('span:first-child').style.fontWeight = 'normal';
+                var statusEl = item.querySelector('.track-status');
+                statusEl.innerHTML = 'READY';
+                statusEl.style.color = '#555';
+                statusEl.style.fontWeight = 'normal';
+            }
+        });
+    }
+
+    function selectTrack(index) {
+        if (index < 0 || index >= trackItems.length) return;
+        
+        currentTrackIndex = index;
+        var selectedItem = trackItems[currentTrackIndex];
+        var newSrc = selectedItem.getAttribute('data-src');
+        var newTitle = selectedItem.getAttribute('data-title');
+        
+        currentTrackTitle.innerHTML = newTitle;
+        audio.src = newSrc;
+        audio.load();
+        
+        updatePlaylistUI(currentTrackIndex);
+
+        audio.play().then(function() {
+            playIcon.innerHTML = '❚❚';
+            playIcon.style.marginLeft = '0px';
+            playBtn.style.backgroundColor = 'rgba(179,139,77,0.1)';
+        }).catch(function(error) {
+            console.log("자동재생 유의:", error);
+        });
+    }
+
+    function prevTrack() {
+        var nextIndex = currentTrackIndex - 1;
+        if (nextIndex < 0) nextIndex = trackItems.length - 1;
+        selectTrack(nextIndex);
+    }
+
+    function nextTrack() {
+        var nextIndex = (currentTrackIndex + 1) % trackItems.length;
+        selectTrack(nextIndex);
+    }
+
+    trackItems.forEach(function(item, index) {
+        item.addEventListener('click', function() {
+            selectTrack(index);
+        });
+    });
+
+    function formatTime(seconds) {
+        if (isNaN(seconds)) return "0:00";
+        var min = Math.floor(seconds / 60);
+        var sec = Math.floor(seconds % 60);
+        return min + ":" + (sec < 10 ? "0" + sec : sec);
+    }
+
+    audio.addEventListener('loadedmetadata', function() {
+        durationTextEl.innerHTML = formatTime(audio.duration);
+    });
+
+    audio.addEventListener('timeupdate', function() {
+        if (audio.duration) {
+            var percent = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = percent + "%";
+            currentTimeEl.innerHTML = formatTime(audio.currentTime);
+        }
+    });
+
+    progressContainer.addEventListener('click', function(e) {
+        var width = this.clientWidth;
+        var rect = this.getBoundingClientRect();
+        var clickX = e.clientX - rect.left;
+        var duration = audio.duration;
+        if (duration) {
+            audio.currentTime = (clickX / width) * duration;
+        }
+    });
+
+    audio.addEventListener('ended', function() {
+        nextTrack();
+    });
+
+    var slides = document.querySelectorAll('.main-slide');
+    var pageNumEl = document.getElementById('slidePageNum');
+    var currentSlideIndex = 0;
+    var totalSlides = slides.length;
+
+    function changeSlide() {
+        if(slides.length === 0) return;
+        slides[currentSlideIndex].style.opacity = 0;
+        currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+        slides[currentSlideIndex].style.opacity = 0.6;
+        
+        var displayNum = currentSlideIndex + 1;
+        if(pageNumEl) {
+            pageNumEl.innerHTML = displayNum < 10 ? "0" + displayNum : displayNum;
+        }
+    }
+
+    setInterval(changeSlide, 3000);
+</script>
